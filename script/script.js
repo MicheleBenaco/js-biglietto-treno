@@ -8,6 +8,9 @@
 
 const numeroKm = prompt('Indicare il numero di Kilometri che si vuole percorrere ');
 const numeroEta = prompt('Indicare la propio eta ');
+document.getElementById("stamp_km").innerHTML =  numeroKm
+document.getElementById("stamp_eta").innerHTML =  numeroEta
+
 console.log(numeroKm);
 console.log(numeroEta);
 
@@ -17,13 +20,15 @@ console.log(prezzoBigl);
 
 if(numeroEta <= 18 ){
  const scontoMin = prezzoBigl * 10 / 100;
- let prezzoTotMin = scontoMin - prezzoBigl
+ const prezzoTotMin = prezzoBigl - scontoMin
+ document.getElementById("biglietti_costo").innerHTML =  prezzoTotMin
+ console.log(prezzoTotMin);
 } else if ( numeroEta >= 65){
     const scontoMax = prezzoBigl * 40 / 100;
-    const prezzoTotMax = scontoMax - prezzoBigl
+    const prezzoTotMax = prezzoBigl - scontoMax
+    document.getElementById("biglietti_costo").innerHTML =  prezzoTotMax
+    console.log(prezzoTotMax);
 }else{
     prezzoBigl = prezzoBigl
+    document.getElementById("biglietti_costo").innerHTML =  prezzoBigl
 }
-console.log(prezzoBigl);
-console.log(prezzoTotMin);
-console.log(prezzoTotMax);
