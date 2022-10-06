@@ -19,12 +19,12 @@ const prezzoBigl = numeroKm * 0.21
 console.log(prezzoBigl);
 
 if(numeroEta <= 18 ){
- const scontoMin = prezzoBigl * 10 / 100;
+ const scontoMin = (prezzoBigl / 100) * 10;
  const prezzoTotMin = prezzoBigl - scontoMin
  document.getElementById("biglietti_costo").innerHTML =  prezzoTotMin;
  console.log(prezzoTotMin);
 } else if ( numeroEta >= 65){
-    const scontoMax = prezzoBigl * 40 / 100;
+    const scontoMax = (prezzoBigl /  100 ) * 65;
     const prezzoTotMax = prezzoBigl - scontoMax
     document.getElementById("biglietti_costo").innerHTML =  prezzoTotMax;
     console.log(prezzoTotMax);
