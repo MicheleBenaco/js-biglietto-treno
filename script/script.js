@@ -21,14 +21,14 @@ console.log(prezzoBigl);
 if(numeroEta <= 18 ){
  const scontoMin = prezzoBigl * 10 / 100;
  const prezzoTotMin = prezzoBigl - scontoMin
- document.getElementById("biglietti_costo").innerHTML =  prezzoTotMin
+ document.getElementById("biglietti_costo").innerHTML =  prezzoTotMin;
  console.log(prezzoTotMin);
 } else if ( numeroEta >= 65){
     const scontoMax = prezzoBigl * 40 / 100;
     const prezzoTotMax = prezzoBigl - scontoMax
-    document.getElementById("biglietti_costo").innerHTML =  prezzoTotMax
+    document.getElementById("biglietti_costo").innerHTML =  prezzoTotMax;
     console.log(prezzoTotMax);
 }else{
-    prezzoBigl = prezzoBigl
-    document.getElementById("biglietti_costo").innerHTML =  prezzoBigl
+
+    document.getElementById("biglietti_costo").innerHTML =  prezzoBigl;
 }
